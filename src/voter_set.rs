@@ -81,11 +81,6 @@ impl<Id: Eq + Ord> VoterSet<Id> {
 			}
 		}
 
-		if voters.is_empty() {
-			// No non-zero weights; the set would be empty.
-			return None
-		}
-
 		let voters = voters
 			.into_iter()
 			.enumerate()
